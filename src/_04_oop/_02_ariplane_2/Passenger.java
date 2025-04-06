@@ -1,4 +1,4 @@
-package _04_oop._02_ariplane;
+package _04_oop._02_ariplane_2;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,6 +7,15 @@ public class Passenger {
     private String name;
     private String passportNumber;
     private List<Ticket> myBookings;
+
+    public int getSatisfy() {
+        return satisfy;
+    }
+
+    public void setSatisfy(int satisfy) {
+        this.satisfy = satisfy;
+    }
+
     private int satisfy;
     private boolean noShow;
     private int canceledGain;

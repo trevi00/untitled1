@@ -1,4 +1,4 @@
-package _04_oop._02_ariplane;
+package _04_oop._02_ariplane_2;
 
 public class Seat {
     private int serialNum;

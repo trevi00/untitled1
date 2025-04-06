@@ -1,4 +1,4 @@
-package _04_oop._02_ariplane;
+package _04_oop._02_ariplane_2;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Random;
 
 public class Flight {
+
     private String flightNumber;
     private String departure;
     private String destination;
@@ -16,10 +17,12 @@ public class Flight {
     private List<Passenger> waitlist;
     private String status;
     private int delayMinutes;
+    private Airplane airplane;
+    private Maintenance maintenance;
 
     public Flight(String flightNumber, String departure, String destination,
                   LocalDateTime departureTime, LocalDateTime arrivalTime, double basePrice,
-                  int economySeats, int businessSeats, int firstClassSeats) {
+                  int economySeats, int businessSeats, int firstClassSeats, Airplane airplane, Maintenance maintenance) {
         this.flightNumber = flightNumber;
         this.departure = departure;
         this.destination = destination;
@@ -30,6 +33,9 @@ public class Flight {
         this.delayMinutes = 0;
         this.seats = new ArrayList<>();
         this.waitlist = new ArrayList<>();
+        this.airplane = airplane;
+        this.maintenance = maintenance;
+
         generateSeats(economySeats, businessSeats, firstClassSeats);
     }
 
@@ -133,5 +139,22 @@ public class Flight {
 
     public LocalDateTime getDepartureTime() {
         return departureTime;
+    }
+
+    public String getDeparture() {
+        return departure;
+    }
+
+    public Airplane getAirplane() {
+        return airplane;
+    }
+
+    public Maintenance getMaintenance() {
+        return maintenance;
+    }
+
+
+    public String getDestination() {
+        return destination;
     }
 }
